@@ -66,10 +66,11 @@ class Layermap:
         #This function normalizes the input images to the range[1,255].
         try:
             sample_image = cv2.imread(image_path)
+            sample_image = cv2.cvtColor(sample_image, cv2.COLOR_BGR2RGB)
         except:
             print("File not found. Please place the image file in the cwd.")
         
-        sample_image = cv2.cvtColor(sample_image, cv2.COLOR_BGR2RGB)
+
         res = cv2.resize(sample_image, dsize=(150,150))
         sample_image = cv2.normalize(res, None, alpha=0, beta=1, norm_type=cv2.NORM_MINMAX, dtype=cv2.CV_32F)
         sample_image_processed = np.expand_dims(sample_image, axis=0)
