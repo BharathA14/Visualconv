@@ -11,6 +11,8 @@ Created a package to visualize different layers of a keras model for a given ima
 4. Select the image to be visualzied.
 >visual.output('imagename.format')
  
+ Example
  
+ [github-small](https://github.com/BharathA14/Visualconv/edit/master/example.png)
  
 It is recommended to have the image file in the current working directory.
